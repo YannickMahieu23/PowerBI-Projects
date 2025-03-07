@@ -1,0 +1,301 @@
+EVALUATE
+	UNION(
+		ROW(
+			"Table", "public space_flights",
+			"Column", "index",
+			"Count", COUNT('public space_flights'[index]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[index]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[index]),
+			"Min", MIN('public space_flights'[index]),
+			"Max", MAX('public space_flights'[index]),
+			"Median", MEDIAN('public space_flights'[index]),
+			"Mean", AVERAGE('public space_flights'[index]),
+			"Standard Deviation", STDEV.P('public space_flights'[index]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					'public space_flights'[index] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					MOD(
+						'public space_flights'[index],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					MOD(
+						'public space_flights'[index],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'public space_flights'[index],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'public space_flights'[index],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Company",
+			"Count", COUNT('public space_flights'[Company]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Company]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Company]),
+			"Min", MIN('public space_flights'[Company]),
+			"Max", MAX('public space_flights'[Company]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Date",
+			"Count", COUNT('public space_flights'[Date]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Date]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Date]),
+			"Min", MIN('public space_flights'[Date]),
+			"Max", MAX('public space_flights'[Date]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					'public space_flights'[Date] = 0
+				)),
+				0
+			),
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", DATEDIFF(
+				MIN('public space_flights'[Date]),
+				MAX('public space_flights'[Date]),
+				DAY
+			),
+			"Range in Months", DATEDIFF(
+				MIN('public space_flights'[Date]),
+				MAX('public space_flights'[Date]),
+				MONTH
+			),
+			"Range in Years", DATEDIFF(
+				MIN('public space_flights'[Date]),
+				MAX('public space_flights'[Date]),
+				YEAR
+			)
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Rocket",
+			"Count", COUNT('public space_flights'[Rocket]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Rocket]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Rocket]),
+			"Min", MIN('public space_flights'[Rocket]),
+			"Max", MAX('public space_flights'[Rocket]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Mission",
+			"Count", COUNT('public space_flights'[Mission]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Mission]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Mission]),
+			"Min", MIN('public space_flights'[Mission]),
+			"Max", MAX('public space_flights'[Mission]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "RocketStatus",
+			"Count", COUNT('public space_flights'[RocketStatus]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[RocketStatus]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[RocketStatus]),
+			"Min", MIN('public space_flights'[RocketStatus]),
+			"Max", MAX('public space_flights'[RocketStatus]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Price",
+			"Count", COUNT('public space_flights'[Price]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Price]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Price]),
+			"Min", MIN('public space_flights'[Price]),
+			"Max", MAX('public space_flights'[Price]),
+			"Median", MEDIAN('public space_flights'[Price]),
+			"Mean", AVERAGE('public space_flights'[Price]),
+			"Standard Deviation", STDEV.P('public space_flights'[Price]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					'public space_flights'[Price] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					MOD(
+						'public space_flights'[Price],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'public space_flights',
+					MOD(
+						'public space_flights'[Price],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'public space_flights'[Price],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'public space_flights'[Price],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "MissionStatus",
+			"Count", COUNT('public space_flights'[MissionStatus]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[MissionStatus]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[MissionStatus]),
+			"Min", MIN('public space_flights'[MissionStatus]),
+			"Max", MAX('public space_flights'[MissionStatus]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Launch Platform",
+			"Count", COUNT('public space_flights'[Launch Platform]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Launch Platform]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Launch Platform]),
+			"Min", MIN('public space_flights'[Launch Platform]),
+			"Max", MAX('public space_flights'[Launch Platform]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Launch Site",
+			"Count", COUNT('public space_flights'[Launch Site]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Launch Site]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Launch Site]),
+			"Min", MIN('public space_flights'[Launch Site]),
+			"Max", MAX('public space_flights'[Launch Site]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "public space_flights",
+			"Column", "Country",
+			"Count", COUNT('public space_flights'[Country]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('public space_flights'[Country]),
+			"Null Count", COUNTROWS('public space_flights') - COUNT('public space_flights'[Country]),
+			"Min", MIN('public space_flights'[Country]),
+			"Max", MAX('public space_flights'[Country]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		)
+	)

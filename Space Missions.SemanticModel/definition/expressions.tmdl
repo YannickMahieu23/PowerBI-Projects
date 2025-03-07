@@ -1,0 +1,384 @@
+expression 'SES-9  GTO mission  Downrange landing attempt (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{4},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 5, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: 16421ac3-6bd7-42d9-a82b-a2009fe9eb68
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'CRS-9  LEO mission  RTLS landing  2nd successful LZ-1 landing (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{6},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 7, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: cfbc38ff-e671-4851-ac13-1796be34ce7b
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'CRS-8  LEO mission  Downrange landing  ①First successful ASDS landing (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{3},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 4, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: d005eaeb-449c-432c-b17a-44b6fc3dfef0
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'Iridium NEXT 1  LEO mission  Downrange landing  ① First successful landing on JR' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{8},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 9, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: 651cf82e-171c-4896-a6e8-d6dfb77ea951
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'Eutelsat 117W B and ABS 2A  GTO mission  Downrange landing attempt (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{0},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", 2),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Headers met verhoogd niveau", "Index", 1, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Volgorde van kolommen gewijzigd",1),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Bovenste rijen verwijderd1",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Type gewijzigd",{{"Index", "Mission_ID"}})
+		in
+		    #"Namen van kolommen gewijzigd"
+	lineageTag: ac1af3f1-c1ee-413c-b31e-ebcdce2fbdb6
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'Orbcomm OG2 2  LEO mission  RTLS landing  ①First successful landing (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{5},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 6, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: 44d02ca4-80c3-436a-94df-05369ca5c159
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'JCSAT-16  GTO mission  Downrange landing  4th successful ASDS landing (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{7},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 8, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: 028655ab-cdff-4225-847a-25f8ecaadf5f
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'CRS-10 LEO mission' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{9},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 10, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: abb0142e-90d8-4d62-a9e1-8a94f22d8a37
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'Thaicom 8  GTO mission  Downrange landing  3rd successful ASDS landing (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{1},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 2, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: efbe62c7-3a4b-4ce8-af73-822c76a72e39
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'Echostar XXIII  GTO mission  Expendable  ①First expendable Falcon 9 FT (Sheet1)' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{11},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 12, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: f3ed8d46-fdbe-4308-b7a2-6bc3976a426c
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'JCSAT-14  GTO mission  Downrange landing  ①First ASDS landing from GTO mission (' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{2},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Bovenste rijen verwijderd1", "Index", 3, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd"
+	lineageTag: 8703f46e-711f-47bc-9327-d2c2c258109a
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
+expression 'SES-10 GTO mission' =
+		let
+		    Bron = Excel.Workbook(File.Contents("C:\Users\Yennikson\Desktop\Covid en data oefeningen\Space Flight Report\Falcon 9FT raw data.xlsx"), null, false),
+		    Sheet1_sheet = Bron{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+		    #"Tabel getransponeerd" = Table.Transpose(Sheet1_sheet),
+		    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Tabel getransponeerd", "IsEmptyRow", each try List.IsEmpty(FilterNullAndWhitespace(Record.FieldValues(_))) otherwise false),
+		    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", -1),
+		    #"Aangepaste kolom toegevoegd1" = Table.AddColumn(#"Index toegevoegd", "Section", each if [IsEmptyRow] then -1 else if try #"Index toegevoegd"[IsEmptyRow]{[Index]} otherwise true then [Index] else null),
+		    #"Lege rijen verwijderd" = Table.SelectRows(#"Aangepaste kolom toegevoegd1", each not [IsEmptyRow]),
+		    #"Omlaag doorgevoerd" = Table.FillDown(#"Lege rijen verwijderd", {"Section"}),
+		    #"Rijen gegroepeerd" = Table.Group(#"Omlaag doorgevoerd", {"Section"}, {{"Rijen", each _}}, GroupKind.Local),
+		    #"Geselecteerde groep" = #"Rijen gegroepeerd"[Rijen]{10},
+		    #"Kolommen verwijderd" = Table.RemoveColumns(#"Geselecteerde groep", {"IsEmptyRow", "Index", "Section"}),
+		    #"Tabel getransponeerd1" = Table.Transpose(#"Kolommen verwijderd"),
+		    #"Onderste rijen verwijderd" = Table.RemoveLastN(#"Tabel getransponeerd1", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Bovenste rijen verwijderd" = Table.Skip(#"Onderste rijen verwijderd", each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+		    #"Headers met verhoogd niveau" = Table.PromoteHeaders(#"Bovenste rijen verwijderd", [PromoteAllScalars=true]),
+		    #"Bovenste rijen verwijderd1" = Table.Skip(#"Headers met verhoogd niveau",1),
+		    #"Type gewijzigd" = Table.TransformColumnTypes(#"Bovenste rijen verwijderd1",{{"T +", type any}, {"Speed", type any}, {"Altitude", type any}}),
+		    #"Index toegevoegd1" = Table.AddIndexColumn(#"Type gewijzigd", "Index", 11, 0, Int64.Type),
+		    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd1",{"Index", "T +", "Speed", "Altitude"}),
+		    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Volgorde van kolommen gewijzigd",{{"Index", "Mission_ID"}}),
+		    #"Type gewijzigd1" = Table.TransformColumnTypes(#"Namen van kolommen gewijzigd",{{"T +", Int64.Type}, {"Speed", Int64.Type}, {"Altitude", type number}})
+		in
+		    #"Type gewijzigd1"
+	lineageTag: 3508a7ae-8ca7-4d13-a5cd-57b8ea357605
+	queryGroup: SpaceX_Mission
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+

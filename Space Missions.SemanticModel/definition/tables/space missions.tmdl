@@ -1,0 +1,242 @@
+table 'space missions'
+	lineageTag: f15112b1-e720-4f66-9619-9c5086cbdbe6
+
+	measure 'Total Missions' = ```
+			COUNT('space missions'[index])
+				
+			```
+		formatString: 0
+		lineageTag: ec3033c1-f32c-4718-831f-a2c92ab6f392
+
+	measure 'Mission Succes Rate' = ```
+			VAR grand_total =
+					CALCULATE(
+						[Total Missions],
+						ALL('space missions'[MissionStatus])
+					)
+					VAR part_total =
+					CALCULATE(
+						[Total Missions],
+						'space missions'[MissionStatus] = "SUCCESS"
+					)
+					VAR successrate = DIVIDE(
+						part_total,
+						grand_total
+					)
+			
+					RETURN
+						IF(
+							successrate <> BLANK(),
+							IF(
+								AND(
+									[Total Missions] < 3,
+									successrate = 1
+								),
+								"not enough data",
+								successrate
+							),
+							"not yet successful"
+						)
+				
+			```
+		lineageTag: 699edc38-e2f8-426b-a6d1-3a99f2d8a31a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Revenue' = ```
+			VAR revenue = SUM('space missions'[Price])
+					RETURN
+						revenue
+				
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 3d7bbe06-a409-476a-b3d7-723b19e48149
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Company Choice' = ```
+			IF(
+						ISFILTERED(companies[Company]),
+						SELECTEDVALUE(
+							companies[Company],
+							"Multiple Companies"
+						),
+						""
+					)
+				
+			```
+		lineageTag: e67f16de-3037-405f-9f5e-45f25cc911a6
+
+	measure 'Mission price' = ```
+			VAR price = SUM('space missions'[Price])
+					RETURN
+						price
+				
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6d2a0949-b2a7-4ef3-bf2c-345732cf21ae
+
+		changedProperty = FormatString
+
+	measure MTD = ```
+			CALCULATE(
+						[Total Missions],
+						DATESMTD(datetable[Date])
+					)
+				
+			```
+		formatString: 0
+		lineageTag: ebdc2fd3-517a-4dae-8711-bb01c0c90583
+
+	measure unicode_nav_pane =
+			
+			UNICHAR(9776)
+		lineageTag: b5c070e8-967a-49d1-995f-7b1622e38a3f
+
+	measure unicode = ```
+			UNICHAR(9776)
+			
+			
+			```
+		lineageTag: c1eac727-c1cf-40d3-8bdb-f038533e4e6b
+
+	column Company
+		dataType: string
+		lineageTag: d7bc988e-4bd5-47b7-8654-50648ee9b322
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 75d580da-83c8-4a57-bb00-83dddc39c8d7
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 2dcff293-6b64-409b-a621-7b144833d67c
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column Rocket
+		dataType: string
+		lineageTag: f7931c33-34f8-4315-bc82-b89cc5638a4c
+		summarizeBy: none
+		sourceColumn: Rocket
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mission
+		dataType: string
+		lineageTag: 5fda0327-09bb-4c17-90fb-dc056c3e2c23
+		summarizeBy: none
+		sourceColumn: Mission
+
+		annotation SummarizationSetBy = Automatic
+
+	column RocketStatus
+		dataType: string
+		lineageTag: 4e3dedb6-5aa0-401c-bc4c-bf505719e5c6
+		summarizeBy: none
+		sourceColumn: RocketStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: decimal
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 52c7d582-ef6e-48bd-acfd-397c107c01fb
+		summarizeBy: sum
+		sourceColumn: Price
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column MissionStatus
+		dataType: string
+		lineageTag: 71ffb737-0554-475a-ac5d-00104472bb5d
+		summarizeBy: none
+		sourceColumn: MissionStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch Platform'
+		dataType: string
+		lineageTag: eaeb86c6-2a3d-48bd-8bb7-fe0e6821e568
+		summarizeBy: none
+		sourceColumn: Launch Platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch Site'
+		dataType: string
+		lineageTag: ce37fae6-8364-4078-ad92-1b84e0749a68
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Launch Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 31145580-332b-495f-b4d0-9fde7f6880e6
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 17331c17-760c-44d4-9ffb-1c59136a02f3
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'space missions-6fa079c9-cb88-490d-b03b-398e029fc2f2' = m
+		mode: import
+		source =
+				let
+				    Bron = Csv.Document(File.Contents("C:\Users\Data\Space\Space+Missions\space_missions.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Headers met verhoogd niveau" = Table.PromoteHeaders(Bron, [PromoteAllScalars=true]),
+				    #"Waarde vervangen" = Table.ReplaceValue(#"Headers met verhoogd niveau","1,160.00","1160.00",Replacer.ReplaceText,{"Price"}),
+				    #"Waarde vervangen1" = Table.ReplaceValue(#"Waarde vervangen","5,000.00","5000,00",Replacer.ReplaceText,{"Price"}),
+				    #"Waarde vervangen2" = Table.ReplaceValue(#"Waarde vervangen1",".",",",Replacer.ReplaceText,{"Price"}),
+				    #"Type gewijzigd" = Table.TransformColumnTypes(#"Waarde vervangen2",{{"Date", type date}, {"Time", type time}, {"Price", Currency.Type}}),
+				    #"Vermenigvuldigde kolom" = Table.TransformColumns(#"Type gewijzigd", {{"Price", each _ * 1000000, Currency.Type}}),
+				    #"Kolom splitsen op scheidingsteken" = Table.SplitColumn(#"Vermenigvuldigde kolom", "Location", Splitter.SplitTextByEachDelimiter({","}, QuoteStyle.Csv, true), {"Location.1", "Location.2"}),
+				    #"Type gewijzigd1" = Table.TransformColumnTypes(#"Kolom splitsen op scheidingsteken",{{"Location.1", type text}, {"Location.2", type text}}),
+				    #"Kolom splitsen op scheidingsteken1" = Table.SplitColumn(#"Type gewijzigd1", "Location.1", Splitter.SplitTextByEachDelimiter({","}, QuoteStyle.Csv, false), {"Location.1.1", "Location.1.2"}),
+				    #"Type gewijzigd2" = Table.TransformColumnTypes(#"Kolom splitsen op scheidingsteken1",{{"Location.1.1", type text}, {"Location.1.2", type text}}),
+				    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Type gewijzigd2",{{"Location.1.1", "Launch Platform"}, {"Location.2", "Country"}, {"Location.1.2", "Launch Site"}}),
+				    #"Waarde vervangen3" = Table.ReplaceValue(#"Namen van kolommen gewijzigd","Spaceport America, New Mexico","Spaceport America",Replacer.ReplaceText,{"Launch Site"}),
+				    #"Waarde vervangen4" = Table.ReplaceValue(#"Waarde vervangen3","M?hia","Mahia",Replacer.ReplaceText,{"Launch Site"}),
+				    #"Waarde vervangen5" = Table.ReplaceValue(#"Waarde vervangen4","MÄ#(0081)hia","Mahia",Replacer.ReplaceText,{"Launch Site"}),
+				    #"Waarde vervangen6" = Table.ReplaceValue(#"Waarde vervangen5","Pacific Spaceport Complex, Kodiak, Alaska","Pacific Spaceport Complex, Alaska",Replacer.ReplaceText,{"Launch Site"}),
+				    #"Index toegevoegd" = Table.AddIndexColumn(#"Waarde vervangen6", "Index", 0, 1, Int64.Type)
+				in
+				    #"Index toegevoegd"
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+

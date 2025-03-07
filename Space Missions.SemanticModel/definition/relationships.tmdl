@@ -1,0 +1,33 @@
+relationship c50f1aa9-eaf4-44a0-873c-3f66d0c402da
+	fromColumn: 'space missions'.Company
+	toColumn: companies.Company
+
+relationship b97c2e80-f492-4cd5-8634-7b2b36c6b8c9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: datetable.Date
+	toColumn: LocalDateTable_76232a76-a699-4efe-b32e-9d5c39dc7258.Date
+
+relationship 916d196e-032c-4d10-a948-ee03828e1a46
+	joinOnDateBehavior: datePartOnly
+	fromColumn: datetable.'Begin van de week'
+	toColumn: LocalDateTable_224444a0-7aba-43b6-b8c3-ea9ab28f2492.Date
+
+relationship e612481e-55e0-4846-95a7-69ce013df74f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: datetable.'Begin van de maand'
+	toColumn: LocalDateTable_716ffeeb-14f0-4042-8820-91c11a8e2d15.Date
+
+relationship a3a13f6c-e890-4cd4-9f8e-df68d17358d7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: datetable.'Begin van het jaar'
+	toColumn: LocalDateTable_9c8c8532-02bd-492a-9c46-7ba6349406a0.Date
+
+relationship 2bb29701-a5a5-73e0-6c6c-29484c82908b
+	fromColumn: 'space missions'.Date
+	toColumn: datetable.Date
+
+relationship 732840a3-ae2a-453f-a498-05104170857a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Last refresh date'.'Last refresh date'
+	toColumn: LocalDateTable_23c0fc32-f54f-4e05-b704-fddc21f075a7.Date
+

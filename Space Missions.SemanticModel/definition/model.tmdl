@@ -1,0 +1,35 @@
+model Model
+	culture: nl-NL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: nl-NL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Mission Telemetry per flight by a SpaceC Rocket
+queryGroup SpaceX_Mission
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["space missions","datetable","Eutelsat 117W B and ABS 2A  GTO mission  Downrange landing attempt (Sheet1)","Thaicom 8  GTO mission  Downrange landing  3rd successful ASDS landing (Sheet1)","JCSAT-14  GTO mission  Downrange landing  ①First ASDS landing from GTO mission (","CRS-8  LEO mission  Downrange landing  ①First successful ASDS landing (Sheet1)","SES-9  GTO mission  Downrange landing attempt (Sheet1)","Orbcomm OG2 2  LEO mission  RTLS landing  ①First successful landing (Sheet1)","CRS-9  LEO mission  RTLS landing  2nd successful LZ-1 landing (Sheet1)","JCSAT-16  GTO mission  Downrange landing  4th successful ASDS landing (Sheet1)","Iridium NEXT 1  LEO mission  Downrange landing  ① First successful landing on JR","CRS-10 LEO mission","SES-10 GTO mission","Echostar XXIII  GTO mission  Expendable  ①First expendable Falcon 9 FT (Sheet1)","companies","Last refresh date"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.140.1351.0 (25.02)+9bb96b6a5aee417774126f3416805b86efac121f
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
+
+ref table 'space missions'
+ref table DateTableTemplate_43eac237-77d8-4837-945a-b2b28df76d28
+ref table datetable
+ref table companies
+ref table measuretable
+ref table LocalDateTable_76232a76-a699-4efe-b32e-9d5c39dc7258
+ref table LocalDateTable_224444a0-7aba-43b6-b8c3-ea9ab28f2492
+ref table LocalDateTable_716ffeeb-14f0-4042-8820-91c11a8e2d15
+ref table LocalDateTable_9c8c8532-02bd-492a-9c46-7ba6349406a0
+ref table 'Last refresh date'
+ref table LocalDateTable_23c0fc32-f54f-4e05-b704-fddc21f075a7
+
+ref cultureInfo nl-NL
+

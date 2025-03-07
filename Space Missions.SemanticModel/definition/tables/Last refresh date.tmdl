@@ -1,0 +1,29 @@
+table 'Last refresh date'
+	lineageTag: 742823d8-19ff-4f1f-9f91-0d1fb70122e5
+
+	column 'Last refresh date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e245ca6b-1acd-48d8-976a-36e3d5496e9e
+		summarizeBy: none
+		sourceColumn: Last refresh date
+
+		variation Variatie
+			isDefault
+			relationship: 732840a3-ae2a-453f-a498-05104170857a
+			defaultHierarchy: LocalDateTable_23c0fc32-f54f-4e05-b704-fddc21f075a7.Datumhiërarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Last refresh date' = m
+		mode: import
+		source =
+				let
+				    Bron = DateTime.LocalNow()
+				in
+				    Bron
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = DateTime
+
