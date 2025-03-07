@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 574.5752463900659,
+            "y": 0
+          },
+          "nodeIndex": "companies",
+          "nodeLineageTag": "2edfb26c-e046-4b6d-befd-c11d65ff25f1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 839.63815174555077,
+            "y": 0
+          },
+          "nodeIndex": "measuretable",
+          "nodeLineageTag": "ad523b76-120e-4c32-a48a-812970ac871e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 499.88483326631626,
+            "y": 416.74129742278336
+          },
+          "nodeIndex": "space missions",
+          "nodeLineageTag": "f15112b1-e720-4f66-9619-9c5086cbdbe6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 289.094302686896,
+            "y": 0
+          },
+          "nodeIndex": "datetable",
+          "nodeLineageTag": "ffbe4c53-3ec6-431b-8c23-d66450704d8e",
+          "size": {
+            "height": 281.82656135989168,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1105.5578344726243,
+            "y": 0
+          },
+          "nodeIndex": "Last refresh date",
+          "nodeLineageTag": "742823d8-19ff-4f1f-9f91-0d1fb70122e5",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4
+        }
+      ],
+      "name": "Alle tabellen",
+      "zoomValue": 111.34444623223672,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Alle tabellen",
+  "defaultDiagram": "Alle tabellen"
+}

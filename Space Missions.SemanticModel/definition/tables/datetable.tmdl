@@ -1,0 +1,115 @@
+table datetable
+	lineageTag: ffbe4c53-3ec6-431b-8c23-d66450704d8e
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: a2f96166-1720-424a-9ed5-820bf1a65daf
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variatie
+			isDefault
+			relationship: b97c2e80-f492-4cd5-8634-7b2b36c6b8c9
+			defaultHierarchy: LocalDateTable_76232a76-a699-4efe-b32e-9d5c39dc7258.Datumhiërarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Naam van de dag'
+		dataType: string
+		lineageTag: 24da103d-aa6b-4d2b-9be2-c1e5884310ae
+		summarizeBy: none
+		sourceColumn: Naam van de dag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Begin van de week'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0133d831-d5a2-47ce-ac71-d3905bfdeab7
+		summarizeBy: none
+		sourceColumn: Begin van de week
+
+		variation Variatie
+			isDefault
+			relationship: 916d196e-032c-4d10-a948-ee03828e1a46
+			defaultHierarchy: LocalDateTable_224444a0-7aba-43b6-b8c3-ea9ab28f2492.Datumhiërarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Begin van de maand'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aa217352-ce7a-4f68-acf4-a500be9203ff
+		summarizeBy: none
+		sourceColumn: Begin van de maand
+
+		variation Variatie
+			isDefault
+			relationship: e612481e-55e0-4846-95a7-69ce013df74f
+			defaultHierarchy: LocalDateTable_716ffeeb-14f0-4042-8820-91c11a8e2d15.Datumhiërarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Naam van de maand'
+		dataType: string
+		lineageTag: 7bc1964e-3109-4d4b-b7fc-c076c2395634
+		summarizeBy: none
+		sourceColumn: Naam van de maand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Begin van het jaar'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 22f1788c-e65c-4260-a99e-cbd17424d29e
+		summarizeBy: none
+		sourceColumn: Begin van het jaar
+
+		variation Variatie
+			isDefault
+			relationship: a3a13f6c-e890-4cd4-9f8e-df68d17358d7
+			defaultHierarchy: LocalDateTable_9c8c8532-02bd-492a-9c46-7ba6349406a0.Datumhiërarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Jaar
+		dataType: int64
+		formatString: 0
+		lineageTag: 3154f1d1-f367-44e4-b240-d784ac10dcee
+		summarizeBy: sum
+		sourceColumn: Jaar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition datetable-c851cb04-0849-47c5-ba0a-7d7e483be679 = m
+		mode: import
+		source =
+				let
+				    Bron = #date(1957, 1, 1),
+				    #"Create Date List" = List.Dates(Bron,Number.From(DateTime.LocalNow())-Number.From(Bron),#duration(1,0,0,0)),
+				    #"Geconverteerd naar tabel" = Table.FromList(#"Create Date List", Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Type gewijzigd" = Table.TransformColumnTypes(#"Geconverteerd naar tabel",{{"Column1", type date}}),
+				    #"Namen van kolommen gewijzigd" = Table.RenameColumns(#"Type gewijzigd",{{"Column1", "Date"}}),
+				    #"Rijen gefilterd" = Table.SelectRows(#"Namen van kolommen gewijzigd", each [Date] >= #date(1957, 1, 1) and [Date] <= #date(2024, 6, 30)),
+				    #"Ingevoegde naam van de dag" = Table.AddColumn(#"Rijen gefilterd", "Naam van de dag", each Date.DayOfWeekName([Date]), type text),
+				    #"Begin van week ingevoegd" = Table.AddColumn(#"Ingevoegde naam van de dag", "Begin van de week", each Date.StartOfWeek([Date],Day.Monday), type date),
+				    #"Begin van maand ingevoegd" = Table.AddColumn(#"Begin van week ingevoegd", "Begin van de maand", each Date.StartOfMonth([Date]), type date),
+				    #"Ingevoegde naam van de maand" = Table.AddColumn(#"Begin van maand ingevoegd", "Naam van de maand", each Date.MonthName([Begin van de maand]), type text),
+				    #"Begin van jaar ingevoegd" = Table.AddColumn(#"Ingevoegde naam van de maand", "Begin van het jaar", each Date.StartOfYear([Begin van de maand]), type date),
+				    #"Jaar ingevoegd" = Table.AddColumn(#"Begin van jaar ingevoegd", "Jaar", each Date.Year([Begin van het jaar]), Int64.Type)
+				in
+				    #"Jaar ingevoegd"
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
