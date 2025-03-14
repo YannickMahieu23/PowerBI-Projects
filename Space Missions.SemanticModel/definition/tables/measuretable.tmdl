@@ -52,6 +52,72 @@ table measuretable
 			```
 		lineageTag: 474c25d7-9552-4cfd-93a7-1a121b57a181
 
+	measure title_year =
+			
+			"in " & SELECTEDVALUE(datetable[Jaar]
+			, IF(
+			    ISFILTERED(datetable[jaar])
+			    ,CONCATENATEX(
+			    VALUES(datetable[Jaar])
+			    ,datetable[Jaar]
+			    ,", "
+			    , datetable[Jaar]
+			    ,ASC
+			    )
+			    , "all years"
+			))
+		lineageTag: ebde9a4a-536f-4055-ae5f-ce11017a1776
+
+	measure title_mission_succesrate = ```
+			
+			VAR company = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [mission succes rate floor]), [mission succes rate floor], desc)
+			RETURN MAXX(company, 'space missions'[Company]) & " has the highest mission succesrate " & [title_year]
+			```
+		lineageTag: 0bf782b8-c520-4820-b0c0-117c3daa8f71
+
+	measure 'Mission Succes Rate floor' = ```
+			
+			VAR grand_total =
+					CALCULATE(
+						[Total Missions],
+						ALL('space missions'[MissionStatus])
+					)
+					VAR part_total =
+					CALCULATE(
+						[Total Missions],
+						'space missions'[MissionStatus] = "SUCCESS"
+					)
+					VAR successrate = DIVIDE(
+						part_total,
+						grand_total
+					)
+			
+					RETURN
+						IF(
+							successrate <> BLANK(),
+							0, successrate
+						)
+				
+			```
+		lineageTag: ca6f54fa-b6d7-4aa3-9e15-64f4c77fd3c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Target = 50
+		formatString: 0
+		lineageTag: bbce9db4-5f5f-4f53-b4f9-51f5f7deb5fb
+
+	measure undertarget = IF([Total Missions] < [Target], [Total Missions], [Target])
+		formatString: 0
+		lineageTag: 1e24983a-69ac-47c0-be18-1dda295d7143
+
+	measure abovetarget = IF([Total Missions] > [Target], [Total Missions] - [Target], "")
+		lineageTag: aff95303-cd78-4e09-8834-9f51475e316e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Value
 		formatString: 0
 		lineageTag: 8adbf2c7-1624-41d8-838f-256c274b2a5f
