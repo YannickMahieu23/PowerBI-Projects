@@ -72,6 +72,19 @@
             "width": 234
           },
           "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1100.4635317857283,
+            "y": 282.37064871139171
+          },
+          "nodeIndex": "ColorTable",
+          "nodeLineageTag": "f9dfc309-758c-4b09-92e5-f228ed1934e3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Alle tabellen",
