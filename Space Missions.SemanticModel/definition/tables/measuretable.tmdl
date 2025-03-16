@@ -118,6 +118,15 @@ table measuretable
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure title_table_companies = ```
+			
+			VAR company = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [Total Missions]), [Total Missions], desc)
+			RETURN MAXX(company, 'space missions'[Company]) & " has initiated the most missions " & [title_year]
+			```
+		lineageTag: cc0f3a26-fe3a-4cd5-aef3-44a7d713ffcd
+
 	column Value
 		formatString: 0
 		lineageTag: 8adbf2c7-1624-41d8-838f-256c274b2a5f
