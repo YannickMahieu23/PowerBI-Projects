@@ -1,0 +1,139 @@
+{
+  "name": "Gemeente Amsterdam Huisstijl",
+  "dataColors": [
+    "#1A80BB",
+    "#262626",
+    "#686868",
+    "#969696",
+    "#C4C4C4",
+    "#EEEEEE",
+    "#FE9666",
+    "#A66999"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#070f25",
+  "tableAccent": "#0F1934",
+  "foregroundNeutralSecondary": "#787878",
+  "backgroundLight": "#BEBEBE",
+  "foregroundNeutralTertiary": "#E8E8E8",
+  "backgroundNeutral": "#E8E8E8",
+  "neutral": "#FFE600",
+  "good": "#00A03C",
+  "minimum": "#E50082",
+  "center": "#FFE600",
+  "maximum": "#BED200",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "Avenir Roman",
+      "color": "#000000"
+    },
+    "title": {
+      "bold": true,
+      "fontSize": 14,
+      "fontFace": "Avenir Roman",
+      "color": "#000000"
+    },
+    "header": {
+      "fontSize": 14,
+      "fontFace": "Avenir Roman",
+      "color": "#FFFFFF"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Avenir Roman",
+      "color": "#FFFFFF"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "*": [
+          {
+            "wordWrap": true
+          }
+        ],
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ],
+        "visualTooltip": [
+          {
+            "titleFontColor": {
+              "solid": {
+                "color": "#BEBEBE"
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": "#E8E8E8"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#787878"
+              }
+            }
+          }
+        ],
+        "visualHeaderTooltip": [
+          {
+            "titleFontColor": {
+              "solid": {
+                "color": "#BEBEBE"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#787878"
+              }
+            }
+          }
+        ],
+        "outspacePane": [
+          {
+            "checkboxAndApplyColor": {
+              "solid": {
+                "color": "#00A03C"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ]
+      }
+    },
+    "lineStackedColumnComboChart": {
+      "*": {}
+    },
+    "lineClusteredColumnComboChart": {
+      "*": {}
+    },
+    "areaChart": {
+      "*": {}
+    },
+    "lineChart": {
+      "*": {}
+    },
+    "stackedAreaChart": {
+      "*": {}
+    }
+  }
+}
