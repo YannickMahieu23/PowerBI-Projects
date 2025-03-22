@@ -5,7 +5,7 @@ table companies
 		dataType: int64
 		formatString: 0
 		lineageTag: e827737a-5c0d-4e81-bfac-47c5142a8888
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Index
 
 		annotation SummarizationSetBy = Automatic

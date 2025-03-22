@@ -85,6 +85,32 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1100.4635317857283,
+            "y": 246.37064871139171
+          },
+          "nodeIndex": "space missions top5bottom5",
+          "nodeLineageTag": "1b0db986-7672-45c1-a2a0-bfbd707797e9",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1100.4635317857283,
+            "y": 258.37064871139171
+          },
+          "nodeIndex": "Tabel",
+          "nodeLineageTag": "82324e7b-a06c-4fbb-aadf-02fc71565489",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Alle tabellen",
