@@ -68,7 +68,7 @@ table measuretable
 			))
 		lineageTag: ebde9a4a-536f-4055-ae5f-ce11017a1776
 
-	measure title_mission_succesrate = ```
+	measure title_company_mission_succesrate = ```
 			
 			VAR company = 
 			TOPN(1,
@@ -126,6 +126,33 @@ table measuretable
 			RETURN MAXX(company, 'space missions'[Company]) & " has initiated the most missions " & [title_year]
 			```
 		lineageTag: cc0f3a26-fe3a-4cd5-aef3-44a7d713ffcd
+
+	measure title_top3bottom3_companies = ```
+			
+			VAR topcompany = TOPN(1,'space missions top5bottom5', 'space missions top5bottom5'[Index] = 1, DESC)
+			RETURN MAXX(topcompany, 'space missions top5bottom5'[Company]) & " has successfully completed the most missions "
+			
+			```
+		lineageTag: c1127fb7-f108-4927-8827-fa28e8c84e66
+
+	measure title_launchsite_mission_succesrate = ```
+			
+			VAR launchsite = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[launch site]), "aantal", [mission succes rate floor]), [mission succes rate floor], desc)
+			RETURN MAXX(launchsite, 'space missions'[launch site]) & " has the highest mission succesrate " & [title_year]
+			```
+		lineageTag: 7e4cc0c7-038e-4fd1-bb8d-6fff51517e83
+
+	measure title_company_missionprice = ```
+			
+			VAR company = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [Total Revenue]), [Total Revenue], desc)
+			
+			RETURN MAXX(company, 'space missions'[Company]) & " has accrued the most revenue " & [title_year]
+			```
+		lineageTag: e9b16aa6-71ff-42f8-bc76-3e1685ce1363
 
 	column Value
 		formatString: 0

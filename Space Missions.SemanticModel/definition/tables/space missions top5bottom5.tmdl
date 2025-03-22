@@ -1,0 +1,82 @@
+table 'space missions top5bottom5'
+	lineageTag: 1b0db986-7672-45c1-a2a0-bfbd707797e9
+
+	column Company
+		dataType: string
+		lineageTag: d1ce3d02-3fca-48c7-85ed-e588d4d58992
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column MissionStatus
+		dataType: string
+		lineageTag: 76b54ce4-9b98-4f99-ab0f-3f5594651e71
+		summarizeBy: none
+		sourceColumn: MissionStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column missions
+		dataType: int64
+		formatString: 0
+		lineageTag: 80d7110a-db77-4d22-a148-c78a908bd93c
+		summarizeBy: sum
+		sourceColumn: missions
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: e9bc00da-75c7-4788-ae37-1638c3281582
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column top_bottom_missions = ```
+			
+			Var bottom =
+			RANKX('space missions top5bottom5'
+			    ,'space missions top5bottom5'[missions] -- use index to sort the rank on to prevent ties
+			    , 
+			    , ASC
+			    , dense
+			)
+			Var topp =
+			RANKX('space missions top5bottom5'
+			    ,'space missions top5bottom5'[missions]
+			    , 
+			    , DESC
+			    , dense
+			)
+			
+			RETURN
+			bottom >= 1 && bottom <= 3
+			||
+			topp >= 1 && topp <= 3
+			```
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 62148c69-c798-41c5-b1de-ed09b66fc67b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'space missions top5bottom5' = m
+		mode: import
+		source =
+				let
+				    Bron = #"space missions",
+				    #"Andere kolommen verwijderd" = Table.SelectColumns(Bron,{"Company", "MissionStatus"}),
+				    #"Rijen gegroepeerd" = Table.Group(#"Andere kolommen verwijderd", {"Company", "MissionStatus"}, {{"missions", each Table.RowCount(_), Int64.Type}}),
+				    #"Rijen gesorteerd" = Table.Sort(#"Rijen gegroepeerd",{{"missions", Order.Descending}}),
+				    #"Rijen gefilterd" = Table.SelectRows(#"Rijen gesorteerd", each ([MissionStatus] = "Success")),
+				    #"Index toegevoegd" = Table.AddIndexColumn(#"Rijen gefilterd", "Index", 1, 1, Int64.Type)
+				in
+				    #"Index toegevoegd"
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+
