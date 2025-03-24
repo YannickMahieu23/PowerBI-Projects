@@ -1,6 +1,0 @@
-// Meer informatie over DAX-query's vindt u op https://aka.ms/dax-queries
-
-// Hier is een voorbeeld van een DAX-query van uw model. Klik op Uitvoeren
-// Probeer andere DAX-query's door met de rechtermuisknop op een tabel, kolom of meting te klikken in het gegevensvenster en een van de opties Snelle query's te kiezen
-EVALUATE
-    TOPN(100, 'public space_flights')

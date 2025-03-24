@@ -212,6 +212,14 @@ table 'space missions'
 
 		annotation SummarizationSetBy = Automatic
 
+	column Company_rocketkey
+		dataType: string
+		lineageTag: abfaab2b-c7d2-445d-8972-3640b9347cbf
+		summarizeBy: none
+		sourceColumn: Company_rocketkey
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'space missions-6fa079c9-cb88-490d-b03b-398e029fc2f2' = m
 		mode: import
 		source =
@@ -232,7 +240,8 @@ table 'space missions'
 				    #"Waarde vervangen4" = Table.ReplaceValue(#"Waarde vervangen3","M?hia","Mahia",Replacer.ReplaceText,{"Launch Site"}),
 				    #"Waarde vervangen5" = Table.ReplaceValue(#"Waarde vervangen4","MÄ#(0081)hia","Mahia",Replacer.ReplaceText,{"Launch Site"}),
 				    #"Waarde vervangen6" = Table.ReplaceValue(#"Waarde vervangen5","Pacific Spaceport Complex, Kodiak, Alaska","Pacific Spaceport Complex, Alaska",Replacer.ReplaceText,{"Launch Site"}),
-				    #"Index toegevoegd" = Table.AddIndexColumn(#"Waarde vervangen6", "Index", 0, 1, Int64.Type)
+				    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Waarde vervangen6", "Company_rocketkey", each [Company] & "_" & [Rocket]),
+				    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", 1, 1, Int64.Type)
 				in
 				    #"Index toegevoegd"
 

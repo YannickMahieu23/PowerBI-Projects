@@ -2,10 +2,7 @@
   "version": "1.0.0",
   "tabOrder": [
     "Query uitvoeren op 1",
-    "Query uitvoeren op 2",
-    "Query uitvoeren op 3",
-    "Query uitvoeren op 4",
-    "Query uitvoeren op 5"
+    "Query uitvoeren op 2"
   ],
-  "defaultTab": "Query uitvoeren op 4"
+  "defaultTab": "Query uitvoeren op 2"
 }

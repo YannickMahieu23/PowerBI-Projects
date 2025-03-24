@@ -128,9 +128,6 @@ cultureInfo nl-NL
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "company": {
@@ -1118,13 +1115,9 @@ cultureInfo nl-NL
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "country": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -1280,16 +1273,6 @@ cultureInfo nl-NL
 			            },
 			            "Weight": 0.9
 			          }
-			        },
-			        {
-			          "Total Rockets": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1419,16 +1402,6 @@ cultureInfo nl-NL
 			        },
 			        {
 			          "Successrate": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Succesrate": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1679,16 +1652,6 @@ cultureInfo nl-NL
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.486
-			          }
-			        },
-			        {
-			          "Company": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2164,7 +2127,8 @@ cultureInfo nl-NL
 			      "Terms": [
 			        {
 			          "company": {
-			            "State": "Generated"
+			            "State": "Generated",
+			            "Weight": 0.87
 			          }
 			        },
 			        {
@@ -2390,11 +2354,6 @@ cultureInfo nl-NL
 			          }
 			        },
 			        {
-			          "company name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "co": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -2484,8 +2443,7 @@ cultureInfo nl-NL
 			            "Weight": 0.589
 			          }
 			        }
-			      ],
-			      "NameType": "Name"
+			      ]
 			    },
 			    "measuretable": {
 			      "Definition": {
@@ -4857,9 +4815,4949 @@ cultureInfo nl-NL
 			          }
 			        }
 			      ]
+			    },
+			    "public_space_flight.company_rocketkey": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions",
+			          "ConceptualProperty": "Company_rocketkey"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "company rocketkey": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Company_rocketkey": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "co rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "corp rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "corporation rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "corps rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "employer rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "enterprise rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "business rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "group rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "conglomerate rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "co inc rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.486
+			          }
+			        }
+			      ]
+			    },
+			    "company.rocket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "companies",
+			          "ConceptualProperty": "Rocket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rocket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "missile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "skyrocket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "company.company_rocketkey": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "companies",
+			          "ConceptualProperty": "Company_rocketkey"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "company rocketkey": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Company_rocketkey": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "co rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "corp rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "corporation rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "corps rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "employer rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "enterprise rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "business rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "group rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "conglomerate rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "co inc rocketkey": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.486
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.latest_powerbi_refresh": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "latest_powerbi_refresh"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latest powerbi refresh": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "latest_powerbi_refresh": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.title_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "title_year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title_year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "title yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "designation year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "name year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "award year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "call year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "heading year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "label year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.title_company_mission_succesrate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "title_company_mission_succesrate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title company mission succesrate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title_company_mission_succesrate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "designation company mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "title co mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "title corp mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "title corporation mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "title corps mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "title employer mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "title enterprise mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "name company mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "award company mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "call company mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.mission_succes_rate_floor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "Mission Succes Rate floor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mission succes rate floor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mission succe rate ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate bottom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate base": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate flooring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate surface": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate flat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "mission succe rate story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "mission succe rate deck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.undertarget": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "undertarget"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "undertarget": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.abovetarget": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "abovetarget"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "abovetarget": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.title_table_companies": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "title_table_companies"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title table companies": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title_table_companies": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "companies": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "table companies": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "designation table company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "name table company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "award table company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "call table company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "heading table company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "label table company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "title table corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "title table establishment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "title table enterprise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "table corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.title_top_3bottom_3_companies": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "title_top3bottom3_companies"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title top 3bottom 3 companies": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title_top3bottom3_companies": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "designation top 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "name top 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "award top 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "call top 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "heading top 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "label top 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "title best 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "title first 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "title leading 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "title maximum 3bottom 3 company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.title_launchsite_mission_succesrate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "title_launchsite_mission_succesrate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title launchsite mission succesrate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title_launchsite_mission_succesrate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "designation launchsite mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "name launchsite mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "award launchsite mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "call launchsite mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "heading launchsite mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "label launchsite mission succesrate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.title_company_missionprice": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "title_company_missionprice"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title company missionprice": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title_company_missionprice": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "designation company missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title co missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title corp missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title corporation missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title corps missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title employer missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title enterprise missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "name company missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "award company missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "call company missionprice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measuretable.selected_filters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "measuretable",
+			          "ConceptualProperty": "selected_filters"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selected filters": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "selected_filters": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "filters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "selected strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "selected sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "selected sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "selected riddle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "selected screen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "riddle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "screen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "last_refresh_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refresh date": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "refresh date": {
+			            "State": "Generated",
+			            "Weight": 0.8439
+			          }
+			        },
+			        {
+			          "last refresh moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "refresh moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "last refresh period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "refresh period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "end refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "last_refresh_date.last_refresh_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date",
+			          "ConceptualProperty": "Last refresh date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refresh date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "refresh date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "last refresh moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "refresh moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "last refresh period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "refresh period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "end refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former refresh date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "last_refresh_date.last_refresh_date.datumhiërarchie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date",
+			          "VariationSource": "Last refresh date",
+			          "VariationSet": "Variatie",
+			          "Hierarchy": "Datumhiërarchie"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datumhiërarchie": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "last_refresh_date.last_refresh_date.jaar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date",
+			          "VariationSource": "Last refresh date",
+			          "VariationSet": "Variatie",
+			          "Hierarchy": "Datumhiërarchie",
+			          "HierarchyLevel": "Jaar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jaar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh date jaar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh moment jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "end refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "final refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "closing refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "concluding refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "finishing refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "former refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latest refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latter refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "past refresh date jaar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "last_refresh_date.last_refresh_date.kwartaal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date",
+			          "VariationSource": "Last refresh date",
+			          "VariationSet": "Variatie",
+			          "Hierarchy": "Datumhiërarchie",
+			          "HierarchyLevel": "Kwartaal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kwartaal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh date kwartaal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh moment kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "end refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "final refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "closing refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "concluding refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "finishing refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "former refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latest refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latter refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "past refresh date kwartaal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "last_refresh_date.last_refresh_date.maand": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date",
+			          "VariationSource": "Last refresh date",
+			          "VariationSet": "Variatie",
+			          "Hierarchy": "Datumhiërarchie",
+			          "HierarchyLevel": "Maand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "maand": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh date maand": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh moment maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "end refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "final refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "closing refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "concluding refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "finishing refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "former refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latest refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latter refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "past refresh date maand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "last_refresh_date.last_refresh_date.dag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last refresh date",
+			          "VariationSource": "Last refresh date",
+			          "VariationSet": "Variatie",
+			          "Hierarchy": "Datumhiërarchie",
+			          "HierarchyLevel": "Dag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refresh date dag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "refresh date dag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "last refresh moment dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "refresh moment dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "end refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "final refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "closing refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "concluding refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "finishing refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "former refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latest refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "latter refresh date dag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "color_table": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color table": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ColorTable": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "color tabletop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "color bench": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color board": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color counter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color slab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color desk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color stall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color table top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color spreadsheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.theme": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Theme "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "theme": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "melody": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "leitmotif": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "music": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "refrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "argument": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "thesis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "subject": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "matter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.main_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Main Color "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "main color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "main hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "main tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.background_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Background Color "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "background color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "background hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "background tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "background shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "background dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "background paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "background pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.border_slicer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Border Slicer "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "border slicer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "slicer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.border": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Border "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "border": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "perimeter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "periphery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "circumference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "limit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "rim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "edging": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "frame": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.font_header": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Font Header "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "font header": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "header": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "font shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "font pass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "font goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "font slogan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "font legend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "font headpiece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "font description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.visual_background": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Visual Background "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visual background": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "background": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "visual upbringing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "visual education": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "upbringing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "education": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "visual family": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "visual experience": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "visual training": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "family": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "experience": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "training": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.visual_border": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Visual Border "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visual border": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visual boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visual perimeter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visual periphery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visual circumference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visual edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual limit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual rim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual edging": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual frame": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.visual_font": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Visual font "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visual font": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "font": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "visual typeface": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visual Arial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visual Garamond": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "typeface": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Arial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Garamond": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "visual lettering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "visual Courier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "lettering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "color_table.neutral_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ColorTable",
+			          "ConceptualProperty": "Neutral color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "neutral color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "neutral hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "neutral tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "neutral shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "neutral dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "neutral paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "neutral pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions top5bottom5"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "space missions top5bottom5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "space mission top5bottom5": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5.company": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions top5bottom5",
+			          "ConceptualProperty": "Company"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "company": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "co": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corps": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "enterprise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "conglomerate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "co inc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5.mission_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions top5bottom5",
+			          "ConceptualProperty": "MissionStatus"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mission status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MissionStatus": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mission category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mission importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mission prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mission prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "mission condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mission class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5.mission": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions top5bottom5",
+			          "ConceptualProperty": "missions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mission": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "assignment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "duty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "operation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "errand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "enterprise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "task": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "job": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "work": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "undertaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5.index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions top5bottom5",
+			          "ConceptualProperty": "Index"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "index": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "directory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "catalogue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "catalog": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "guide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "file": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "manifestation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "indicator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5.top_bottom_mission": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "space missions top5bottom5",
+			          "ConceptualProperty": "top_bottom_missions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top bottom mission": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top_bottom_missions": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "bottom mission": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best bottom mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first bottom mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading bottom mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum bottom mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peak bottom mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "upper bottom mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "top bottom assignment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "top bottom duty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "top bottom operation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "top bottom errand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "space_missions_top5bottom5_has_top_bottom_mission": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions top5bottom5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "space_missions_top5bottom5": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5"
+			          }
+			        },
+			        "space_missions_top5bottom5.top_bottom_mission": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5.top_bottom_mission"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "space_missions_top5bottom5"
+			            },
+			            "Object": {
+			              "Role": "space_missions_top5bottom5.top_bottom_mission"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_top5bottom5_have_top_bottom_missions"
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5_has_index": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions top5bottom5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "space_missions_top5bottom5": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5"
+			          }
+			        },
+			        "space_missions_top5bottom5.index": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5.index"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "space_missions_top5bottom5"
+			            },
+			            "Object": {
+			              "Role": "space_missions_top5bottom5.index"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_top5bottom5_have_indices"
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5_has_mission": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions top5bottom5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "space_missions_top5bottom5": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5"
+			          }
+			        },
+			        "space_missions_top5bottom5.mission": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5.mission"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "space_missions_top5bottom5"
+			            },
+			            "Object": {
+			              "Role": "space_missions_top5bottom5.mission"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_top5bottom5_have_missions"
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5_has_mission_status": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions top5bottom5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "space_missions_top5bottom5": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5"
+			          }
+			        },
+			        "space_missions_top5bottom5.mission_status": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5.mission_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "space_missions_top5bottom5"
+			            },
+			            "Object": {
+			              "Role": "space_missions_top5bottom5.mission_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_top5bottom5_have_mission_statuses"
+			        }
+			      ]
+			    },
+			    "color_table_has_neutral_color": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.neutral_color": {
+			          "Target": {
+			            "Entity": "color_table.neutral_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.neutral_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_neutral_colors"
+			        }
+			      ]
+			    },
+			    "color_table_has_visual_font": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.visual_font": {
+			          "Target": {
+			            "Entity": "color_table.visual_font"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.visual_font"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_visual_fonts"
+			        }
+			      ]
+			    },
+			    "color_table_has_visual_border": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.visual_border": {
+			          "Target": {
+			            "Entity": "color_table.visual_border"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.visual_border"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_visual_borders"
+			        }
+			      ]
+			    },
+			    "color_table_has_visual_background": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.visual_background": {
+			          "Target": {
+			            "Entity": "color_table.visual_background"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.visual_background"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_visual_backgrounds"
+			        }
+			      ]
+			    },
+			    "color_table_has_font_header": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.font_header": {
+			          "Target": {
+			            "Entity": "color_table.font_header"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.font_header"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_font_headers"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "color_table.font_header"
+			            },
+			            "Verbs": [
+			              {
+			                "head": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "color_table"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "font_headers_head_color_tables"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table.font_header"
+			            },
+			            "Object": {
+			              "Role": "color_table"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "font_headers_have_color_tables"
+			        }
+			      ]
+			    },
+			    "color_table_has_border": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.border": {
+			          "Target": {
+			            "Entity": "color_table.border"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.border"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_borders"
+			        }
+			      ]
+			    },
+			    "color_table_has_border_slicer": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.border_slicer": {
+			          "Target": {
+			            "Entity": "color_table.border_slicer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.border_slicer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_border_slicers"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "color_table.border_slicer"
+			            },
+			            "Verbs": [
+			              {
+			                "slice": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "color_table"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "border_slicers_slice_color_tables"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table.border_slicer"
+			            },
+			            "Object": {
+			              "Role": "color_table"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "border_slicers_have_color_tables"
+			        }
+			      ]
+			    },
+			    "color_table_has_background_color": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.background_color": {
+			          "Target": {
+			            "Entity": "color_table.background_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.background_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_background_colors"
+			        }
+			      ]
+			    },
+			    "color_table_has_main_color": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.main_color": {
+			          "Target": {
+			            "Entity": "color_table.main_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.main_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_main_colors"
+			        }
+			      ]
+			    },
+			    "color_table_has_theme": {
+			      "Binding": {
+			        "ConceptualEntity": "ColorTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_table": {
+			          "Target": {
+			            "Entity": "color_table"
+			          }
+			        },
+			        "color_table.theme": {
+			          "Target": {
+			            "Entity": "color_table.theme"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_table"
+			            },
+			            "Object": {
+			              "Role": "color_table.theme"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_tables_have_themes"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_has_last_refresh_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date": {
+			          "Target": {
+			            "Entity": "last_refresh_date"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_refresh_dates_have_last_refresh_dates"
+			        }
+			      ]
+			    },
+			    "measuretable_has_selected_filters": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.selected_filters": {
+			          "Target": {
+			            "Entity": "measuretable.selected_filters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.selected_filters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_selected_filters"
+			        }
+			      ]
+			    },
+			    "measuretable_has_title_company_missionprice": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.title_company_missionprice": {
+			          "Target": {
+			            "Entity": "measuretable.title_company_missionprice"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.title_company_missionprice"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_title_company_missionprice"
+			        }
+			      ]
+			    },
+			    "measuretable_has_title_launchsite_mission_succesrate": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.title_launchsite_mission_succesrate": {
+			          "Target": {
+			            "Entity": "measuretable.title_launchsite_mission_succesrate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.title_launchsite_mission_succesrate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_title_launchsite_mission_succesrate"
+			        }
+			      ]
+			    },
+			    "measuretable_has_title_top_3bottom_3_companies": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.title_top_3bottom_3_companies": {
+			          "Target": {
+			            "Entity": "measuretable.title_top_3bottom_3_companies"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.title_top_3bottom_3_companies"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_title_top_3bottom_3_companies"
+			        }
+			      ]
+			    },
+			    "measuretable_has_title_table_companies": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.title_table_companies": {
+			          "Target": {
+			            "Entity": "measuretable.title_table_companies"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.title_table_companies"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_title_table_companies"
+			        }
+			      ]
+			    },
+			    "measuretable_has_abovetarget": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.abovetarget": {
+			          "Target": {
+			            "Entity": "measuretable.abovetarget"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.abovetarget"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_abovetarget"
+			        }
+			      ]
+			    },
+			    "measuretable_has_undertarget": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.undertarget": {
+			          "Target": {
+			            "Entity": "measuretable.undertarget"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.undertarget"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_undertarget"
+			        }
+			      ]
+			    },
+			    "measuretable_has_target": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.target": {
+			          "Target": {
+			            "Entity": "measuretable.target"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.target"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_target"
+			        }
+			      ]
+			    },
+			    "measuretable_has_mission_succes_rate_floor": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.mission_succes_rate_floor": {
+			          "Target": {
+			            "Entity": "measuretable.mission_succes_rate_floor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.mission_succes_rate_floor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_mission_succes_rate_floor"
+			        }
+			      ]
+			    },
+			    "measuretable_has_title_company_mission_succesrate": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.title_company_mission_succesrate": {
+			          "Target": {
+			            "Entity": "measuretable.title_company_mission_succesrate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.title_company_mission_succesrate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_title_company_mission_succesrate"
+			        }
+			      ]
+			    },
+			    "measuretable_has_title_year": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.title_year": {
+			          "Target": {
+			            "Entity": "measuretable.title_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.title_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_title_year"
+			        }
+			      ]
+			    },
+			    "measuretable_has_latest_powerbi_refresh": {
+			      "Binding": {
+			        "ConceptualEntity": "measuretable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measuretable": {
+			          "Target": {
+			            "Entity": "measuretable"
+			          }
+			        },
+			        "measuretable.latest_powerbi_refresh": {
+			          "Target": {
+			            "Entity": "measuretable.latest_powerbi_refresh"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measuretable"
+			            },
+			            "Object": {
+			              "Role": "measuretable.latest_powerbi_refresh"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measuretables_have_latest_powerbi_refresh"
+			        }
+			      ]
+			    },
+			    "company_has_company_rocketkey": {
+			      "Binding": {
+			        "ConceptualEntity": "companies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "company": {
+			          "Target": {
+			            "Entity": "company"
+			          }
+			        },
+			        "company.company_rocketkey": {
+			          "Target": {
+			            "Entity": "company.company_rocketkey"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "company"
+			            },
+			            "Object": {
+			              "Role": "company.company_rocketkey"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "companies_have_company_rocketkeys"
+			        }
+			      ]
+			    },
+			    "company_has_rocket": {
+			      "Binding": {
+			        "ConceptualEntity": "companies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "company": {
+			          "Target": {
+			            "Entity": "company"
+			          }
+			        },
+			        "company.rocket": {
+			          "Target": {
+			            "Entity": "company.rocket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "company"
+			            },
+			            "Object": {
+			              "Role": "company.rocket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "companies_have_rockets"
+			        }
+			      ]
+			    },
 			    "public_space_flight_has_measuretable_total_missions_diff": {
 			      "Binding": {
 			        "ConceptualEntity": "space missions"
@@ -5352,19 +10250,6 @@ cultureInfo nl-NL
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "companies_have_companies"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "company"
-			            },
-			            "Name": {
-			              "Role": "company.company"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "companies_are_names_IDs_of_companies"
 			        }
 			      ]
 			    },
@@ -5566,39 +10451,6 @@ cultureInfo nl-NL
 			        }
 			      ]
 			    },
-			    "public_space_flight_has_mission_priced": {
-			      "Binding": {
-			        "ConceptualEntity": "space missions"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_space_flight": {
-			          "Target": {
-			            "Entity": "public_space_flight"
-			          }
-			        },
-			        "public_space_flight.mission_priced": {
-			          "Target": {
-			            "Entity": "public_space_flight.mission_priced"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_space_flight"
-			            },
-			            "Object": {
-			              "Role": "public_space_flight.mission_priced"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "space_missions_have_mission_priced"
-			        }
-			      ]
-			    },
 			    "public_space_flight_has_mission_price": {
 			      "Binding": {
 			        "ConceptualEntity": "space missions"
@@ -5761,6 +10613,39 @@ cultureInfo nl-NL
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "space_missions_have_total_missions"
+			        }
+			      ]
+			    },
+			    "public_space_flight_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_space_flight": {
+			          "Target": {
+			            "Entity": "public_space_flight"
+			          }
+			        },
+			        "public_space_flight.country": {
+			          "Target": {
+			            "Entity": "public_space_flight.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_space_flight"
+			            },
+			            "Object": {
+			              "Role": "public_space_flight.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_have_countries"
 			        }
 			      ]
 			    },
@@ -6088,6 +10973,84 @@ cultureInfo nl-NL
 			        }
 			      ]
 			    },
+			    "public_space_flight_has_company": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_space_flight": {
+			          "Target": {
+			            "Entity": "public_space_flight"
+			          }
+			        },
+			        "public_space_flight.company": {
+			          "Target": {
+			            "Entity": "public_space_flight.company"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_space_flight"
+			            },
+			            "Object": {
+			              "Role": "public_space_flight.company"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_have_companies"
+			        }
+			      ]
+			    },
+			    "public_space_flight_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_space_flight": {
+			          "Target": {
+			            "Entity": "public_space_flight"
+			          }
+			        },
+			        "public_space_flight.country": {
+			          "Target": {
+			            "Entity": "public_space_flight.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "public_space_flight.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "public_space_flight"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "public_space_flight.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_are_in_countries"
+			        }
+			      ]
+			    },
 			    "public_space_flight_in_launch_site": {
 			      "Binding": {
 			        "ConceptualEntity": "space missions"
@@ -6133,82 +11096,45 @@ cultureInfo nl-NL
 			        }
 			      ]
 			    },
-			    "public_space_flight_has_company": {
+			    "last_refresh_date_is_refreshed_on_last_refresh_date": {
 			      "Binding": {
-			        "ConceptualEntity": "space missions"
+			        "ConceptualEntity": "Last refresh date"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_space_flight": {
+			        "last_refresh_date": {
 			          "Target": {
-			            "Entity": "public_space_flight"
+			            "Entity": "last_refresh_date"
 			          }
 			        },
-			        "company": {
+			        "last_refresh_date.last_refresh_date": {
 			          "Target": {
-			            "Entity": "company"
+			            "Entity": "last_refresh_date.last_refresh_date"
 			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "last_refresh_date.last_refresh_date"
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_space_flight"
-			            },
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "refresh": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
 			            "Object": {
-			              "Role": "company"
+			              "Role": "last_refresh_date"
 			            }
 			          },
 			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "space_missions_have_companies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "company"
-			            },
-			            "Object": {
-			              "Role": "public_space_flight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "companies_have_space_missions"
-			        }
-			      ]
-			    },
-			    "public_space_flight_has_space_news": {
-			      "Binding": {
-			        "ConceptualEntity": "space missions"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_space_flight": {
-			          "Target": {
-			            "Entity": "public_space_flight"
-			          }
-			        },
-			        "space_news": {
-			          "Target": {
-			            "Entity": "space_news"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_space_flight"
-			            },
-			            "Object": {
-			              "Role": "space_news"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "space_missions_have_space_news"
+			          "Weight": 0.9,
+			          "ID": "last_refresh_dates_are_refreshed_on_last_refresh_dates"
 			        }
 			      ]
 			    },
@@ -6255,6 +11181,85 @@ cultureInfo nl-NL
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "datetables_have_space_missions"
+			        }
+			      ]
+			    },
+			    "public_space_flight_has_company1": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_space_flight": {
+			          "Target": {
+			            "Entity": "public_space_flight"
+			          }
+			        },
+			        "company": {
+			          "Target": {
+			            "Entity": "company"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_space_flight"
+			            },
+			            "Object": {
+			              "Role": "company"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_have_companies1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "company"
+			            },
+			            "Object": {
+			              "Role": "public_space_flight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "companies_have_space_missions"
+			        }
+			      ]
+			    },
+			    "space_missions_top5bottom5_has_company": {
+			      "Binding": {
+			        "ConceptualEntity": "space missions top5bottom5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "space_missions_top5bottom5": {
+			          "Target": {
+			            "Entity": "space_missions_top5bottom5"
+			          }
+			        },
+			        "company": {
+			          "Target": {
+			            "Entity": "company"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "space_missions_top5bottom5"
+			            },
+			            "Object": {
+			              "Role": "company"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "space_missions_top5bottom5_have_companies"
 			        }
 			      ]
 			    },
@@ -7707,6 +12712,369 @@ cultureInfo nl-NL
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dag_are_in_maands3"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_has_datumhiërarchie": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.datumhiërarchie": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_refresh_dates_have_datumhiërarchies"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_datumhiërarchie_has_last_refresh_date_last_refresh_date_jaar": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.datumhiërarchie": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.jaar": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.jaar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.jaar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumhiërarchies_have_jaars4"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_datumhiërarchie_has_last_refresh_date_last_refresh_date_kwartaal": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.datumhiërarchie": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.kwartaal": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.kwartaal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumhiërarchies_have_kwartaals4"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_datumhiërarchie_has_last_refresh_date_last_refresh_date_maand": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.datumhiërarchie": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.maand": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.maand"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumhiërarchies_have_maands4"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_datumhiërarchie_has_last_refresh_date_last_refresh_date_dag": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.datumhiërarchie": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.dag": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.dag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.datumhiërarchie"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.dag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumhiërarchies_have_dag4"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_jaar_has_last_refresh_date_last_refresh_date_kwartaal": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.jaar": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.jaar"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.kwartaal": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.kwartaal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.jaar"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jaars_have_kwartaals4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.jaar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kwartaals_have_jaars4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.jaar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kwartaals_are_in_jaars4"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_kwartaal_has_last_refresh_date_last_refresh_date_maand": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.kwartaal": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.kwartaal"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.maand": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.maand"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kwartaals_have_maands4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "maands_have_kwartaals4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.kwartaal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "maands_are_in_kwartaals4"
+			        }
+			      ]
+			    },
+			    "last_refresh_date_last_refresh_date_maand_has_last_refresh_date_last_refresh_date_dag": {
+			      "Binding": {
+			        "ConceptualEntity": "Last refresh date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refresh_date.last_refresh_date.maand": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.maand"
+			          }
+			        },
+			        "last_refresh_date.last_refresh_date.dag": {
+			          "Target": {
+			            "Entity": "last_refresh_date.last_refresh_date.dag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.dag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "maands_have_dag4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.dag"
+			            },
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dag_have_maands4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "last_refresh_date.last_refresh_date.dag"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "last_refresh_date.last_refresh_date.maand"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dag_are_in_maands4"
 			        }
 			      ]
 			    }
