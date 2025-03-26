@@ -18,18 +18,35 @@ table companies
 
 		annotation SummarizationSetBy = Automatic
 
+	column Rocket
+		dataType: string
+		lineageTag: 63f0795d-e4b6-4944-a923-8b31e5f67053
+		summarizeBy: none
+		sourceColumn: Rocket
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company_rocketkey
+		dataType: string
+		lineageTag: 2db34042-0f2c-434f-abc2-57d2b1d8ad67
+		summarizeBy: none
+		sourceColumn: Company_rocketkey
+
+		annotation SummarizationSetBy = Automatic
+
 	partition companies-6921e30e-e4d9-4961-937b-6b41a9413ddc = m
 		mode: import
 		source =
 				let
 				    Bron = Csv.Document(File.Contents("C:\Users\Data\Space\Space+Missions\space_missions.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Headers met verhoogd niveau" = Table.PromoteHeaders(Bron, [PromoteAllScalars=true]),
-				    #"Andere kolommen verwijderd" = Table.SelectColumns(#"Headers met verhoogd niveau",{"Company"}),
-				    #"Dubbele waarden verwijderd" = Table.Distinct(#"Andere kolommen verwijderd"),
-				    #"Index toegevoegd" = Table.AddIndexColumn(#"Dubbele waarden verwijderd", "Index", 1, 1, Int64.Type),
-				    #"Volgorde van kolommen gewijzigd" = Table.ReorderColumns(#"Index toegevoegd",{"Index", "Company"})
+				    #"Andere kolommen verwijderd" = Table.SelectColumns(#"Headers met verhoogd niveau",{"Company", "Rocket"}),
+				    #"Dubbele waarden verwijderd" = Table.Distinct(#"Andere kolommen verwijderd", {"Rocket"}),
+				    #"Rijen gesorteerd" = Table.Sort(#"Dubbele waarden verwijderd",{{"Company", Order.Ascending}}),
+				    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Rijen gesorteerd", "Company_rocketkey", each [Company] & "_" & [Rocket]),
+				    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", 1, 1, Int64.Type)
 				in
-				    #"Volgorde van kolommen gewijzigd"
+				    #"Index toegevoegd"
 
 	annotation PBI_NavigationStepName = Navigatie
 

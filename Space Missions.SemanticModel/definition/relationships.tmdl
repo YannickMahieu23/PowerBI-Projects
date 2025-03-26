@@ -1,7 +1,3 @@
-relationship c50f1aa9-eaf4-44a0-873c-3f66d0c402da
-	fromColumn: 'space missions'.Company
-	toColumn: companies.Company
-
 relationship b97c2e80-f492-4cd5-8634-7b2b36c6b8c9
 	joinOnDateBehavior: datePartOnly
 	fromColumn: datetable.Date
@@ -31,14 +27,19 @@ relationship 732840a3-ae2a-453f-a498-05104170857a
 	fromColumn: 'Last refresh date'.'Last refresh date'
 	toColumn: LocalDateTable_23c0fc32-f54f-4e05-b704-fddc21f075a7.Date
 
-relationship AutoDetected_b21cc700-c436-4fc6-9b1f-7a37d6b30f94
-	fromColumn: 'space missions top5bottom5'.Company
-	toColumn: companies.Company
-
 relationship AutoDetected_00a4e50d-f7c8-45d2-9b11-c8c236a58def
 	isActive: false
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
 	fromColumn: 'space missions top5bottom5'.Index
 	toColumn: 'space missions'.Index
+
+relationship d8e421d1-80eb-9223-fdbe-9d0635279758
+	toCardinality: many
+	fromColumn: 'space missions top5bottom5'.Company
+	toColumn: companies.Company
+
+relationship e4d08553-1e02-6e01-84be-da6a16a5c8a0
+	fromColumn: 'space missions'.Company_rocketkey
+	toColumn: companies.Company_rocketkey
 

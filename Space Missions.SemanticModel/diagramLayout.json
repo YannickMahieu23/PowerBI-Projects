@@ -19,7 +19,8 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 7,
+          "expandedHeight": 128
         },
         {
           "location": {
@@ -32,7 +33,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 3
         },
         {
           "location": {
@@ -45,7 +46,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 4
         },
         {
           "location": {
@@ -58,7 +59,7 @@
             "height": 281.82656135989168,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 5
         },
         {
           "location": {
@@ -71,12 +72,12 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 1100.4635317857283,
-            "y": 282.37064871139171
+            "x": 1104.0559875707766,
+            "y": 143.16298704076948
           },
           "nodeIndex": "ColorTable",
           "nodeLineageTag": "f9dfc309-758c-4b09-92e5-f228ed1934e3",
@@ -84,12 +85,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 1100.4635317857283,
-            "y": 246.37064871139171
+            "x": 837.31614553093914,
+            "y": 486.1670723633668
           },
           "nodeIndex": "space missions top5bottom5",
           "nodeLineageTag": "1b0db986-7672-45c1-a2a0-bfbd707797e9",
@@ -97,20 +98,7 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1100.4635317857283,
-            "y": 258.37064871139171
-          },
-          "nodeIndex": "Tabel",
-          "nodeLineageTag": "82324e7b-a06c-4fbb-aadf-02fc71565489",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
+          "zIndex": 2
         }
       ],
       "name": "Alle tabellen",
