@@ -8,7 +8,7 @@ table 'space missions'
 		formatString: 0
 		lineageTag: ec3033c1-f32c-4718-831f-a2c92ab6f392
 
-	measure 'Mission Succes Rate' = ```
+	measure 'Mission Succes Rate' =
 			VAR grand_total =
 					CALCULATE(
 						[Total Missions],
@@ -24,8 +24,8 @@ table 'space missions'
 						grand_total
 					)
 			
-					RETURN
-						IF(
+					RETURN successrate
+					/*	IF(
 							successrate <> BLANK(),
 							IF(
 								AND(
@@ -37,11 +37,9 @@ table 'space missions'
 							),
 							"not yet successful"
 						)
-				
-			```
+				*/
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 699edc38-e2f8-426b-a6d1-3a99f2d8a31a
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Total Revenue' = ```
 			VAR revenue = SUM('space missions'[Price])

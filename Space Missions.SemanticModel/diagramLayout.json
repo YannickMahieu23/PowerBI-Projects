@@ -99,6 +99,19 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1100.4635317857283,
+            "y": 258.37064871139171
+          },
+          "nodeIndex": "Tabel",
+          "nodeLineageTag": "73bfb4e0-c8f7-4003-919b-fadcb9d70022",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Alle tabellen",

@@ -74,7 +74,7 @@ table measuretable
 			
 			VAR company = 
 			TOPN(1,
-			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [mission succes rate floor]), [mission succes rate floor], desc)
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "succes", [Mission Succes Rate], "aantal", [Total Missions]), [succes], desc, [aantal], desc)
 			RETURN MAXX(company, 'space missions'[Company]) & " has the highest mission succesrate " & [title_year]
 			```
 		lineageTag: 0bf782b8-c520-4820-b0c0-117c3daa8f71
@@ -152,7 +152,7 @@ table measuretable
 			TOPN(1,
 			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [Total Revenue]), [Total Revenue], desc)
 			
-			RETURN MAXX(company, 'space missions'[Company]) & " has accrued the most revenue " & [title_year]
+			RETURN MAXX(company, 'space missions'[Company]) & " has the highest known expenses " & [title_year]
 			```
 		lineageTag: e9b16aa6-71ff-42f8-bc76-3e1685ce1363
 
@@ -184,6 +184,15 @@ table measuretable
 			
 			```
 		lineageTag: 5ff5b219-9a22-4347-be2b-21d6fe2b8f68
+
+	measure title_company_rocket_succesrate = ```
+			
+			VAR rocket = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Rocket]), "succes", [Mission Succes Rate], "aantal", [Total Missions]), [succes], desc, [aantal], desc)
+			RETURN MAXX(rocket, 'space missions'[Rocket]) & " has the highest rocket succesrate " & [title_year]
+			```
+		lineageTag: 3bf24091-e04a-4cea-9bbe-1a1a0d7ec2e3
 
 	column Value
 		formatString: 0
