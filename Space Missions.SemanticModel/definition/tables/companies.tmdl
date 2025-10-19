@@ -41,12 +41,13 @@ table companies
 				    Bron = Csv.Document(File.Contents("C:\Users\Data\Space\Space+Missions\space_missions.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Headers met verhoogd niveau" = Table.PromoteHeaders(Bron, [PromoteAllScalars=true]),
 				    #"Andere kolommen verwijderd" = Table.SelectColumns(#"Headers met verhoogd niveau",{"Company", "Rocket"}),
-				    #"Dubbele waarden verwijderd" = Table.Distinct(#"Andere kolommen verwijderd", {"Rocket"}),
-				    #"Rijen gesorteerd" = Table.Sort(#"Dubbele waarden verwijderd",{{"Company", Order.Ascending}}),
+				    #"Rijen gesorteerd" = Table.Sort(#"Andere kolommen verwijderd",{{"Company", Order.Ascending}}),
 				    #"Aangepaste kolom toegevoegd" = Table.AddColumn(#"Rijen gesorteerd", "Company_rocketkey", each [Company] & "_" & [Rocket]),
-				    #"Index toegevoegd" = Table.AddIndexColumn(#"Aangepaste kolom toegevoegd", "Index", 1, 1, Int64.Type)
+				    #"Dubbele waarden verwijderd" = Table.Distinct(#"Aangepaste kolom toegevoegd", {"Company_rocketkey"}),
+				    #"Index toegevoegd" = Table.AddIndexColumn(#"Dubbele waarden verwijderd", "Index", 1, 1, Int64.Type),
+				    #"Type gewijzigd" = Table.TransformColumnTypes(#"Index toegevoegd",{{"Company_rocketkey", type text}})
 				in
-				    #"Index toegevoegd"
+				    #"Type gewijzigd"
 
 	annotation PBI_NavigationStepName = Navigatie
 
