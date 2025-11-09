@@ -1,3 +1,4 @@
+/// table is a dimension based on the [Company] column of table 'space missions'. [Company] & [Rocket] combination is unique.
 table companies
 	lineageTag: 2edfb26c-e046-4b6d-befd-c11d65ff25f1
 
@@ -28,7 +29,9 @@ table companies
 
 	column Company_rocketkey
 		dataType: string
+		isKey
 		lineageTag: 2db34042-0f2c-434f-abc2-57d2b1d8ad67
+		isDefaultLabel
 		summarizeBy: none
 		sourceColumn: Company_rocketkey
 

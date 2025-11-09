@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "2cc2e9e16ec0b5659a44",
+  "position": {
+    "x": 3.129637586057731,
+    "y": 264.71208217551009,
+    "z": 1000,
+    "height": 249.50985915492959,
+    "width": 620.89014084507039
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "dad8e9b5d07c01e28c3a"
+}

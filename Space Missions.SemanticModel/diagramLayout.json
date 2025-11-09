@@ -19,7 +19,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 7,
+          "zIndex": 5,
           "expandedHeight": 128
         },
         {
@@ -33,7 +33,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 8
         },
         {
           "location": {
@@ -46,7 +46,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 1
         },
         {
           "location": {
@@ -59,7 +59,7 @@
             "height": 281.82656135989168,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -72,7 +72,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 7
         },
         {
           "location": {
@@ -85,7 +85,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 2
         },
         {
           "location": {
@@ -98,12 +98,12 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1100.4635317857283,
-            "y": 258.37064871139171
+            "x": 1111.2408991408734,
+            "y": 328.42353651983387
           },
           "nodeIndex": "Tabel",
           "nodeLineageTag": "73bfb4e0-c8f7-4003-919b-fadcb9d70022",
@@ -111,7 +111,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         }
       ],
       "name": "Alle tabellen",

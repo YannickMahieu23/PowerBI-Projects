@@ -1,3 +1,4 @@
+/// contains latest powerbi refresh dates. Updates automatically when the dataset is refreshed
 table 'Last refresh date'
 	lineageTag: 742823d8-19ff-4f1f-9f91-0d1fb70122e5
 

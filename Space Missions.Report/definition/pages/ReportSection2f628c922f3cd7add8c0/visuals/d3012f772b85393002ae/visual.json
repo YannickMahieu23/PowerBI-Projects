@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "d3012f772b85393002ae",
+  "position": {
+    "x": 0,
+    "y": 0.24316109422488807,
+    "z": 0,
+    "height": 719.75683890577511,
+    "width": 1280,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "background shapes",
+    "groupMode": "ScaleMode"
+  }
+}

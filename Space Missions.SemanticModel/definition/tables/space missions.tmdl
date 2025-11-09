@@ -1,3 +1,4 @@
+/// The dataset 'space missions' contains a table with 4,631 records, one for each space mission between 1957-10-04 and 2022-07-29. Each record contains details on each mission's name, location, date, and status of the launch, the company responsible, and the price, status, and name of the rocket.
 table 'space missions'
 	lineageTag: f15112b1-e720-4f66-9619-9c5086cbdbe6
 
@@ -203,6 +204,7 @@ table 'space missions'
 
 	column Index
 		dataType: int64
+		isKey
 		formatString: 0
 		lineageTag: 17331c17-760c-44d4-9ffb-1c59136a02f3
 		summarizeBy: sum
