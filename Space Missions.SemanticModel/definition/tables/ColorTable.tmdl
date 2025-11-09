@@ -1,9 +1,12 @@
+/// table containing UX colors for conditional formatting of various elements of shapes and visuals.
 table ColorTable
 	lineageTag: f9dfc309-758c-4b09-92e5-f228ed1934e3
 
 	column 'Theme '
 		dataType: string
+		isKey
 		lineageTag: 4f1d2f02-14c1-49ab-83f3-d1ae3fda491c
+		isDefaultLabel
 		summarizeBy: none
 		sourceColumn: "Theme "
 

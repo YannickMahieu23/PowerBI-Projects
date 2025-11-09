@@ -1,3 +1,4 @@
+/// an aggergated version of table 'space missions' on [company], [MissionStatus] ad [succes]. Index column has been added such that the top 5 and bttom 5 could be sorted.
 table 'space missions top5bottom5'
 	lineageTag: 1b0db986-7672-45c1-a2a0-bfbd707797e9
 
@@ -28,6 +29,7 @@ table 'space missions top5bottom5'
 
 	column Index
 		dataType: int64
+		isKey
 		formatString: 0
 		lineageTag: e9bc00da-75c7-4788-ae37-1638c3281582
 		summarizeBy: sum

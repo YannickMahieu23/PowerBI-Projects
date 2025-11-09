@@ -15,8 +15,6 @@ annotation PBI_QueryOrder = ["space missions","datetable","Eutelsat 117W B and A
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
-
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
 ref table 'space missions'

@@ -1,0 +1,1047 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "mission_s_rate",
+  "name": "d815e033e1e050c795d7",
+  "options": {
+    "targetVisualNames": [
+      "27c8a29c7bbaab4bd200"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.15",
+    "activeSection": "7e039cc6c9095b1d00dc",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "Filter549cfc7631d02dadaba2",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "space missions"
+                }
+              },
+              "Property": "Company"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter00e2eee5d472d6aa710a",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "space missions"
+                }
+              },
+              "Property": "Country"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filterd690b32be8e847db1f56",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "space missions"
+                }
+              },
+              "Property": "Rocket"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "7e039cc6c9095b1d00dc": {
+        "visualContainers": {
+          "fa40d1f088c96eb0c537": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a5c5bf619143beaa6d01": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9457e08bca5d0b0e1d34": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1ef16f4f1535904bea49": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2c9c6fe97aa1d63e8ed0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ColorTable"
+                        }
+                      },
+                      "Property": "Main Color "
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "c",
+                                "Entity": "ColorTable",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "c"
+                                            }
+                                          },
+                                          "Property": "Main Color "
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'#298c8c'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "5fb8cf199256c3d6be40": {
+            "singleVisual": {
+              "visualType": "card",
+              "autoSelectVisualType": false,
+              "objects": {}
+            }
+          },
+          "0318f13380c0a00cea2e": {
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "b0e28c165bbb182663a9": {
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "8b7e918032436a892687": {
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "e27618dce57400c595eb": {
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "c9c107f625a6d9034058": {
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "ebc8144b735de9e0927e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7b3c2e87aaa4ae17eb68",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "measuretable"
+                        }
+                      },
+                      "Property": "copyright"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "11d0abd04555739d30a8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "637d075e4cd9c8cdfdbb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "measuretable"
+                        }
+                      },
+                      "Property": "latest_powerbi_refresh"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "b07b77e00b8c5c74c0d4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "eed382c3bd7a73acf48e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "measuretable"
+                        }
+                      },
+                      "Property": "latest_data_refresh"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "05109c770ed47eed95b0": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "6609d7861074d61b0ede": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0ada9de6ed8820ace029": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "aadf4dc256e3e5d67217": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "1c70094de007c088c058": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "4662d89bea5e9790cb2d": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "bb69c9d5703208393e85": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0b0782453ab2e11d1e44": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a2598c3c0155b6e65d24": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "fc41329a5797ec02c737": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "6be8a0bfeb74d0a1e393": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "deb6d177502d64d34228": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "00aae04b2a300e192224": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "c17d967dedeb6d2a6e52": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "452da345331e8e7d9b61": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "44b876bc3e3b4028ce52": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "445c43202d284f1206e1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e0800627e61e01a74081": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "176e2a6eabc0f5b4a63b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "datetable"
+                        }
+                      },
+                      "Property": "Jaar"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "datetable"
+                        }
+                      },
+                      "Property": "Jaar"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4739f881a9ee89cab8bc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cfc6e3064c205d5fbc13",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Company"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Company"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "2266125d427402ae53bb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "f062302225b03dadb900": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "893db36950094120a7d8": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "fe9ce35cb729100d9113": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "82932b06125795f7e3c1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission Succes Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2073781a373c54c3aefb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "datetable"
+                        }
+                      },
+                      "Property": "Jaar"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b7e2b7d37a31c453a967",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission Succes Rate"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "datetable"
+                        }
+                      },
+                      "Property": "Jaar"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "37b6bacb14309e057d31": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f468090e05c3fcc5f7a8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Company"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9f2511f3e046ff2d7f9a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission Succes Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4821d33221f7babd6d13",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission Succes Rate"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Company"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6e81efa0da1659301d02": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6e944d8266b6051077c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "datetable"
+                        }
+                      },
+                      "Property": "Jaar"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0f2be6677373be421cbb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "datetable"
+                        }
+                      },
+                      "Property": "Jaar"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "85327e1526e96da5b9dc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c42e106f707967bf14fb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Rocket"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c065565a0de8b84d50a2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission Succes Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dbe74f3d8fd42f1a7c5b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Mission Succes Rate"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Rocket"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "27c8a29c7bbaab4bd200": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "434c2acdce59371fa3fe",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Company"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a119fc1c08f96926f266",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Company"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "fa3b495ce76d050402d0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "95b82e8cfa0f8f94222b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Rocket"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8c71d21ddb459cc7adb3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "space missions"
+                        }
+                      },
+                      "Property": "Total Missions"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "companies"
+                        }
+                      },
+                      "Property": "Rocket"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "d6a31bcd77d63cd7433e": {
+            "isHidden": false
+          },
+          "20ae1dca0094ded0d150": {
+            "isHidden": false
+          },
+          "a7929fdb1201ee675e9c": {
+            "isHidden": false
+          },
+          "fac5c578200b505cb49e": {
+            "isHidden": true
+          },
+          "9c14ef112ebe256964a0": {
+            "isHidden": true
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
