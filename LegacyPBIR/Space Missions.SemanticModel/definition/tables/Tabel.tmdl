@@ -1,0 +1,37 @@
+table Tabel
+	lineageTag: 73bfb4e0-c8f7-4003-919b-fadcb9d70022
+
+	column Company
+		lineageTag: db9c1ce9-100a-4bde-82f7-ea38ec911130
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: space missions[Company]
+
+		annotation SummarizationSetBy = Automatic
+
+	column succes
+		formatString: 0.00
+		lineageTag: b13f57d8-be73-4940-b301-808e5fa6ab75
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [succes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column aantal
+		formatString: 0
+		lineageTag: ef8e861f-d415-4369-ac4e-6ed295fea261
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [aantal]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabel = calculated
+		mode: import
+		source =
+				TOPN(1,
+				ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "succes", [mission succes rate], "aantal", [Total Missions]), [succes], desc, [aantal], desc)
+
+	annotation PBI_Id = 94297b61e6b1412c95881a750a3312a6
+

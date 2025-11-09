@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Space Missions"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2fccb511-cc5d-48ba-aca5-4c1b816d3f23"
+  }
+}

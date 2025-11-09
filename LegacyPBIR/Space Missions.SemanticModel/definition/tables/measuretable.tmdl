@@ -1,0 +1,211 @@
+table measuretable
+	lineageTag: ad523b76-120e-4c32-a48a-812970ac871e
+
+	measure unicode_open_nav_pane =
+			
+			UNICHAR(9776)
+		lineageTag: 86d34b50-052b-4fec-b1c5-a2862aadcb5b
+
+	measure unicode_close_nav_pane =
+			
+			UNICHAR(187)
+		lineageTag: 70726bb9-0d70-4985-b4c8-7eea07317b8f
+
+	measure copyright = "© Yannick Mahieu " & YEAR(UTCNOW())
+		lineageTag: 93c59d8c-45b9-49ff-bad1-da6cae4b2f66
+
+	measure latest_data_refresh = ```
+			
+			 VAR data = LASTDATE('space missions'[Date])
+			 RETURN "latest data refresh: " & data
+			```
+		lineageTag: 74223db9-bc7b-441b-b00c-efbc2b068708
+
+	measure 'total missions 1 year prev' = CALCULATE([Total Missions], SAMEPERIODLASTYEAR(datetable[Date]))
+		formatString: 0
+		lineageTag: 08d79bb8-5842-4fd7-8457-231bcb0cfb67
+
+	measure 'total missions colorcode' = ```
+			
+			VAR diff = [Total Missions] - [total missions 1 year prev]
+			
+			RETURN
+			SWITCH(
+			    TRUE()
+			    , diff > 0, "Green"
+			    , diff = 1, "Blue"
+			    , diff < 0, "Red"
+			    , "Black"
+			)
+			
+			```
+		lineageTag: 1d02c955-0162-4998-93d7-b52702d6a946
+
+	measure 'total missions diff' = [Total Missions] - [total missions 1 year prev]
+		formatString: 0
+		lineageTag: db1f19ec-26b2-4193-85ef-5eab52170650
+
+	measure latest_powerbi_refresh = ```
+			
+			 VAR data = LASTDATE('Last refresh date'[Last refresh date])
+			 RETURN "latest powerbi refresh: " & FORMAT(data, "Short Date")
+			```
+		lineageTag: 474c25d7-9552-4cfd-93a7-1a121b57a181
+
+	measure title_year = ```
+			"in " & SELECTEDVALUE(datetable[Jaar]
+			, IF(
+			    ISFILTERED(datetable[jaar])
+			    ,CONCATENATEX(
+			    VALUES(datetable[Jaar])
+			    ,datetable[Jaar]
+			    ,", "
+			    , datetable[Jaar]
+			    ,ASC
+			    )
+			    , "all years"
+			))
+			
+			    
+			```
+		lineageTag: ebde9a4a-536f-4055-ae5f-ce11017a1776
+
+	measure title_company_mission_succesrate = ```
+			
+			VAR company = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "succes", [Mission Succes Rate], "aantal", [Total Missions]), [succes], desc, [aantal], desc)
+			RETURN MAXX(company, 'space missions'[Company]) & " has the highest mission succesrate " & [title_year]
+			```
+		lineageTag: 0bf782b8-c520-4820-b0c0-117c3daa8f71
+
+	measure 'Mission Succes Rate floor' = ```
+			
+			VAR grand_total =
+					CALCULATE(
+						[Total Missions],
+						ALL('space missions'[MissionStatus])
+					)
+					VAR part_total =
+					CALCULATE(
+						[Total Missions],
+						'space missions'[MissionStatus] = "SUCCESS"
+					)
+					VAR successrate = DIVIDE(
+						part_total,
+						grand_total
+					)
+			
+					RETURN
+						IF(
+							successrate <> BLANK(),
+							0, successrate
+						)
+				
+			```
+		lineageTag: ca6f54fa-b6d7-4aa3-9e15-64f4c77fd3c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Target = 50
+		formatString: 0
+		lineageTag: bbce9db4-5f5f-4f53-b4f9-51f5f7deb5fb
+
+	measure undertarget = IF([Total Missions] < [Target], [Total Missions], [Target])
+		formatString: 0
+		lineageTag: 1e24983a-69ac-47c0-be18-1dda295d7143
+
+	measure abovetarget = IF([Total Missions] > [Target], [Total Missions] - [Target], "")
+		lineageTag: aff95303-cd78-4e09-8834-9f51475e316e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure title_table_companies = ```
+			
+			VAR company = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [Total Missions]), [Total Missions], desc)
+			RETURN MAXX(company, 'space missions'[Company]) & " has initiated the most missions " & [title_year]
+			```
+		lineageTag: cc0f3a26-fe3a-4cd5-aef3-44a7d713ffcd
+
+	measure title_top3bottom3_companies = ```
+			
+			VAR topcompany = TOPN(1,'space missions top5bottom5', 'space missions top5bottom5'[Index] = 1, DESC)
+			RETURN MAXX(topcompany, 'space missions top5bottom5'[Company]) & " has successfully completed the most missions "
+			
+			```
+		lineageTag: c1127fb7-f108-4927-8827-fa28e8c84e66
+
+	measure title_launchsite_mission_succesrate = ```
+			
+			VAR launchsite = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[launch site]), "aantal", [mission succes rate floor]), [mission succes rate floor], desc)
+			RETURN MAXX(launchsite, 'space missions'[launch site]) & " has the highest mission succesrate " & [title_year]
+			```
+		lineageTag: 7e4cc0c7-038e-4fd1-bb8d-6fff51517e83
+
+	measure title_company_missionprice = ```
+			
+			VAR company = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Company]), "aantal", [Total Revenue]), [Total Revenue], desc)
+			
+			RETURN MAXX(company, 'space missions'[Company]) & " has the highest known expenses " & [title_year]
+			```
+		lineageTag: e9b16aa6-71ff-42f8-bc76-3e1685ce1363
+
+	measure selected_filters = ```
+			
+				VAR yearr = 
+				IF(
+					ISFILTERED(datetable[Jaar])
+					, "Year: " & CONCATENATEX(VALUES(datetable[Jaar]), datetable[Jaar], ", ", datetable[Jaar], ASC)
+					, "All years"
+				)
+				
+				VAR company = 
+				IF(
+					ISFILTERED(companies[Company])
+					, "Companies: " & CONCATENATEX(VALUES(companies[Company]), companies[Company], ", ", companies[Company], ASC)
+					, "All companies"
+				)
+				
+				VAR rocket = 
+				IF(
+					ISFILTERED('companies'[Rocket])
+					, "Rockets: " & CONCATENATEX(VALUES('companies'[Rocket]), 'companies'[Rocket], ", ", 'companies'[Rocket], ASC)
+					, "All rockets"
+				)
+				
+				RETURN yearr & UNICHAR(10) & company & UNICHAR(10) & rocket
+			
+			
+			```
+		lineageTag: 5ff5b219-9a22-4347-be2b-21d6fe2b8f68
+
+	measure title_company_rocket_succesrate = ```
+			
+			VAR rocket = 
+			TOPN(1,
+			ADDCOLUMNS(SUMMARIZE('space missions','space missions'[Rocket]), "succes", [Mission Succes Rate], "aantal", [Total Missions]), [succes], desc, [aantal], desc)
+			RETURN MAXX(rocket, 'space missions'[Rocket]) & " has the highest rocket succesrate " & [title_year]
+			```
+		lineageTag: 3bf24091-e04a-4cea-9bbe-1a1a0d7ec2e3
+
+	column Value
+		formatString: 0
+		lineageTag: 8adbf2c7-1624-41d8-838f-256c274b2a5f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition measuretable = calculated
+		mode: import
+		source = {BLANK()}
+
+	annotation PBI_Id = 26f3d9e0555a4558a70a5d00ed4bd546
+
