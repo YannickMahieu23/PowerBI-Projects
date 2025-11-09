@@ -1,0 +1,96 @@
+table ColorTable
+	lineageTag: f9dfc309-758c-4b09-92e5-f228ed1934e3
+
+	column 'Theme '
+		dataType: string
+		lineageTag: 4f1d2f02-14c1-49ab-83f3-d1ae3fda491c
+		summarizeBy: none
+		sourceColumn: "Theme "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Main Color '
+		dataType: string
+		lineageTag: 4e2735e1-bd2d-42f8-970c-827972400fe3
+		summarizeBy: none
+		sourceColumn: "Main Color "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Background Color '
+		dataType: string
+		lineageTag: bf52c4e0-a2f9-4f5a-bd77-77bf73034f11
+		summarizeBy: none
+		sourceColumn: "Background Color "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Border Slicer '
+		dataType: string
+		lineageTag: 4905840c-0e3c-4974-87c6-3f973494348a
+		summarizeBy: none
+		sourceColumn: "Border Slicer "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Border '
+		dataType: string
+		lineageTag: 35c5fc9e-f1e3-4a3d-a962-9a63abe9b44e
+		summarizeBy: none
+		sourceColumn: "Border "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Font Header '
+		dataType: string
+		lineageTag: 820d60d2-ea32-4f83-9fc3-96a45d8c2af5
+		summarizeBy: none
+		sourceColumn: "Font Header "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visual Background '
+		dataType: string
+		lineageTag: 6eb0bef5-ce6c-4052-ab93-acd9d281e399
+		summarizeBy: none
+		sourceColumn: "Visual Background "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visual Border '
+		dataType: string
+		lineageTag: b4f5cc33-27c9-4930-9739-f2654965a1b2
+		summarizeBy: none
+		sourceColumn: "Visual Border "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visual font '
+		dataType: string
+		lineageTag: 8b66683f-fa7f-4842-9b9c-a2738786193b
+		summarizeBy: none
+		sourceColumn: "Visual font "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Neutral color'
+		dataType: string
+		lineageTag: da0abc58-3984-481c-a358-cfa57edab0a9
+		summarizeBy: none
+		sourceColumn: Neutral color
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ColorTable = m
+		mode: import
+		source =
+				let
+				    Bron = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("fZDLCoMwEEV/RdKtC83LZFk19ge6KeLCjJNNQwtC6e9XTCEhfewON4dc7owjuaD392dBSnJABCUwoESLAWlDj3T4ECI66YRjeSpB0ErtqECzmZOpHMlpRbztYWNa2nZ/yhIhdcFxJ/O0sqIWLi/r5/VatP4RvmYNW/gSHKsr/d4BW7fNhQRNZ8zAvgg97/LCM85+X6EVKPg9Lb5HSq4Yw3pLpUtbphc=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Theme " = _t, #"Main Color " = _t, #"Background Color " = _t, #"Border Slicer " = _t, #"Border " = _t, #"Font Header " = _t, #"Visual Background " = _t, #"Visual Border " = _t, #"Visual font " = _t, #"Neutral color" = _t]),
+				    #"Type gewijzigd" = Table.TransformColumnTypes(Bron,{{"Theme ", type text}, {"Main Color ", type text}, {"Background Color ", type text}, {"Border Slicer ", type text}, {"Border ", type text}, {"Font Header ", type text}, {"Visual Background ", type text}, {"Visual Border ", type text}, {"Visual font ", type text}, {"Neutral color", type text}})
+				in
+				    #"Type gewijzigd"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigatie
+
